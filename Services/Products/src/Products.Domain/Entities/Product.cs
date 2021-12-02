@@ -35,5 +35,14 @@ namespace GeekShopping.Services.Products.Domain.Entities
             //TODO - Adicionar notification pattern
             Removed = true;
         }
+
+        public void SetUpdate(string name,
+            Money price,
+            string description)
+        {
+            Name = name;
+            Price = price;
+            Description = description;
+        }
     }
 }
