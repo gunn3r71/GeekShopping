@@ -5,4 +5,8 @@
 		<rootnamespace>GeekShopping.Services.Products.Domain</rootnamespace>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <Folder Include="Interfaces\Repositories\Base\" />
+	</ItemGroup>
+
 </Project>

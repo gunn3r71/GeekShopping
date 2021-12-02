@@ -13,11 +13,13 @@ namespace GeekShopping.Services.Products.Domain.Entities
         public Product(string name,
             Money price,
             string description, 
+            string imageUrl,
             Guid categoryId)
         {
             Name = name;
             Price = price;
             Description = description;
+            ImageUrl = imageUrl;
             CategoryId = categoryId;
         }
 

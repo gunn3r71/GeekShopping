@@ -14,13 +14,5 @@ namespace GeekShopping.Services.Products.Domain.Entities
         }
 
         public string Name { get; private set; }
-
-        public bool Removed { get; private set; }
-
-        public void SetRemove()
-        {
-            //TODO - Adicionar notification pattern
-            Removed = true;
-        }
     }
 }
