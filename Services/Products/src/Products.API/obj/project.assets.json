@@ -341,6 +341,30 @@
         "runtime": {
           "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
         }
+      },
+      "Products.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Products.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Products.Domain.dll": {}
+        }
+      },
+      "Products.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Products.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Products.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Products.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1027,6 +1051,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Products.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Products.Domain/Products.Domain.csproj",
+      "msbuildProject": "../Products.Domain/Products.Domain.csproj"
+    },
+    "Products.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Products.Infrastructure/Products.Infrastructure.csproj",
+      "msbuildProject": "../Products.Infrastructure/Products.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1034,6 +1068,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.12",
       "Pomelo.EntityFrameworkCore.MySql >= 5.0.3",
+      "Products.Domain >= 1.0.0",
+      "Products.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "Swashbuckle.AspNetCore.Annotations >= 5.6.3",
       "Swashbuckle.AspNetCore.SwaggerUI >= 5.6.3"
@@ -1046,11 +1082,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\Products.API\\Products.API.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\src\\Products.API\\Products.API.csproj",
       "projectName": "Products.API",
-      "projectPath": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\Products.API\\Products.API.csproj",
+      "projectPath": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\src\\Products.API\\Products.API.csproj",
       "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\Products.API\\obj\\",
+      "outputPath": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\src\\Products.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1070,7 +1106,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\src\\Products.Domain\\Products.Domain.csproj": {
+              "projectPath": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\src\\Products.Domain\\Products.Domain.csproj"
+            },
+            "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\src\\Products.Infrastructure\\Products.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\src\\Products.Infrastructure\\Products.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "At390l/VQij/WAAOU94TDVgQjmNoJLB9+RY9NTy5j0aiNG4kcXqB0zYIeQikWSJeWYCjfHRvezGxSGtuOHsjbA==",
+  "dgSpecHash": "xcBzRnfosO9b7+/sOEllm+iugsgh+ectquKXcZsQ7TPe3onhtZsTGutKy1Z+AR3wb45jEWyK9Liut+Z1lJkUBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\Products.API\\Products.API.csproj",
+  "projectFilePath": "C:\\Users\\Lucas\\source\\repos\\GeekShopping\\Services\\Products\\src\\Products.API\\Products.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

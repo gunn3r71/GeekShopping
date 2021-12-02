@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -17,11 +18,31 @@ public class Startup
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+        var connectionString = Configuration.GetConnectionString("DefaultConnection");
+
+        services.AddDbContext<ProductsContext>(o =>
+        {
+            o.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        });
 
         services.AddControllers();
         services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Products.API", Version = "v1" });
+            c.SwaggerDoc("v1", new OpenApiInfo
+            {
+                Title = "Products.API", 
+                Version = "v1",
+                Description = "Primeira API desenvolvida no curso de microsserviços",
+                Contact = new OpenApiContact
+                {
+                    Name = "Lucas Pereira",
+                    Email = "lucas.p.oliveira@outlook.pt"
+                },
+                License = new OpenApiLicense
+                {
+                    Name = "MIT"
+                }
+            });
         });
     }
 

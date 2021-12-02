@@ -5,4 +5,17 @@
 		<rootnamespace>GeekShopping.Services.Products.Infrastructure</rootnamespace>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="EntityTypesConfigurations\" />
+	  <Folder Include="Repositories\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Products.Domain\Products.Domain.csproj" />
+	</ItemGroup>
+
 </Project>

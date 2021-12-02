@@ -24,4 +24,9 @@
 		<Folder Include="Controllers\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Products.Domain\Products.Domain.csproj" />
+	  <ProjectReference Include="..\Products.Infrastructure\Products.Infrastructure.csproj" />
+	</ItemGroup>
+
 </Project>
