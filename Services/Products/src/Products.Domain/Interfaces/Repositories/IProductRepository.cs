@@ -7,8 +7,7 @@ namespace GeekShopping.Services.Products.Domain.Interfaces.Repositories
 {
     public interface IProductRepository : IRepository<Product>
     {
-        Task<bool> Create(Product product);
-        Task<bool> Update(Product product);
-        Task<bool> Remove(Guid productId);
+        Task<Product> Create(Product product);
+        Task<Product> Update(Product product);
     }
 }

@@ -9,5 +9,6 @@ namespace GeekShopping.Services.Products.Domain.Interfaces.Repositories.Base
     {
         Task<IEnumerable<T>> FindAllAsync();
         Task<T> FindByIdAsync(Guid entityId);
+        Task Commit();
     }
 }
